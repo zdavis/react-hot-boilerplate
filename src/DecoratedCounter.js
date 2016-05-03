@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import connect from './connect';
 
-class Counter extends Component {
+@connect()
+export default class DecoratedCounter extends Component {
   constructor(props) {
     super(props);
     this.state = { counter: 0 };
@@ -27,6 +28,4 @@ class Counter extends Component {
    );
   }
 }
-
-export default connect()(Counter);
 
